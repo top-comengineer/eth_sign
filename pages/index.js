@@ -26,14 +26,11 @@ export default function Home() {
   };
 
   const handleAmount = (e) => {
-    console.log(typeof e.target.value);
     setAmount(e.target.value);
   };
 
   const connectWalletHandler = () => {
     if (window.ethereum && window.ethereum.isMetaMask) {
-      console.log("MetaMask Here!");
-
       window.ethereum
         .request({ method: "eth_requestAccounts" })
         .then((result) => {
@@ -64,7 +61,6 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (window.ethereum) {
-        console.log("MetaMask Here!");
         window.ethereum.on("accountsChanged", (newAcc) => {
           setDefaultAccount(newAcc);
           getAccountBalance(newAcc.toString());
@@ -73,7 +69,6 @@ export default function Home() {
           window.location.reload();
         });
       } else {
-        console.log("Need to install MetaMask");
         setErrorMessage(
           "Please install MetaMask browser extension to interact"
         );
