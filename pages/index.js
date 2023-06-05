@@ -1,3 +1,7 @@
+//file name: index.js
+//description: entry point of this project
+//author: supernova
+//date: 2023-06-05
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
