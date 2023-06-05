@@ -171,10 +171,7 @@ export default function Home() {
               </span>
             </a>
           </p>
-          <a
-            href="https://github.com/top-comengineer/eth-transfer-dapp"
-            target="_blan"
-          >
+          <a href="https://github.com/top-comengineer/eth_sign" target="_blan">
             <span className="flex items-center hover:underline font-bold cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
